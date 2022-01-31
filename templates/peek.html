@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for post in couples %}
+<div class="p-4 p-md-3 mb-4 text-dark rounded bg-white border border-dark">
+  
+    <p class="display-4 fst-italic">{{ post.name1 }}</p>
+    <p class="display-4 fst-italic">{{ post.name2 }}</p>
+    <p class="lead my-3">{{ post.gaame }}</p>
+</div>
+{% endfor %}
+{% endblock content %}

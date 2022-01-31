@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<div class="container row mb-3 position-relative" style="min-height:500px; background-image:linear-gradient(135deg, brown, lightblue)">
+  <div class="col-sm-5 position-absolute start-50 top-50 translate-middle">
+    <div class="card bg-primary text-white text-center p-3">
+      <div class="p-5 mb-3 text-light rounded" style="background-image:linear-gradient(45deg, black, grey)">
+        <h2>FLAME TEST</h2>
+        <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <br>
+        <button class="w-100 btn btn-light btn-md" type="submit">Submit</button>
+        </form>
+        <br>
+
+    </div>
+</div>
+</div>
+</div>
+{% endblock content %}
